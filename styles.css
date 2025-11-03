@@ -1,0 +1,35 @@
+body {
+  font-family: Inter;
+  max-width: 800px;
+  margin: 5rem auto 0 auto;
+}
+
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.profile-image {
+  border-radius: 50%;
+}
+
+.profile-title {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.profile-text {
+  margin: 0.5rem 0;
+  line-height: 1.5rem;
+}
