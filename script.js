@@ -1,5 +1,16 @@
 const tabButtons = document.querySelectorAll(".tab-button");
-const tabContents = document.querySelectorAll(".tab-content");
+const tabContent = document.getElementById("tab-content");
+
+const loadTabContent = (tab) => {
+  fetch(`tabs/${tab}.html`)
+    .then((res) => res.text())
+    .then((html) => {
+      tabContent.innerHTML = html;
+    })
+    .catch(() => (tabContent.innerHTML = "<p>Error loading tab.</p>"));
+};
+
+loadTabContent("experience");
 
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -7,12 +18,10 @@ tabButtons.forEach((button) => {
     tabButtons.forEach((button) =>
       button.classList.toggle(
         "active",
-        button.getAttribute("data-link") === dataLink
-      )
+        button.getAttribute("data-link") === dataLink,
+      ),
     );
 
-    tabContents.forEach((content) =>
-      content.classList.toggle("active", content.id === dataLink)
-    );
+    loadTabContent(dataLink);
   });
 });

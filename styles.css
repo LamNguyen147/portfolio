@@ -70,14 +70,6 @@ a {
   margin: 1.5rem 0;
 }
 
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
 .tab-content-section {
   margin-bottom: 2rem;
 }
@@ -90,4 +82,9 @@ a {
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.skill-text {
+  margin: 0.5em 0;
+  line-height: 1.5rem;
 }
